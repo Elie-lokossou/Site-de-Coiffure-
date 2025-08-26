@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pose de Perruques - Ana Coiffure</title>
+  <meta name="description" content="Découvrez nos services de pose de perruques : pose professionnelle, entretien, ajustement et conseils pour une tenue durable. Expertise garantie.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Pose de Perruques",
+    "description": "Services de pose de perruques incluant pose professionnelle, entretien et ajustement",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    },
+    "areaServed": "Cotonou",
+    "serviceType": "Pose de Perruques"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/service-detail.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- SERVICE DETAILS -->
+    <section class="service-details">
+      <div class="container">
+        <div class="service-overview">
+          <div class="service-info">
+            <h2>Notre expertise en pose de perruques</h2>
+            <p>Chez Ana Coiffure, nous maîtrisons parfaitement l'art de la pose de perruques. Notre équipe qualifiée vous propose des services complets incluant la pose, l'ajustement et l'entretien de vos perruques pour un résultat naturel et durable.</p>
+            
+            <div class="service-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Durée</h4>
+                  <p>2 à 4 heures selon le type de pose</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Prix</h4>
+                  <p>À partir de 8000 FCFA</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Garantie</h4>
+                  <p>Tenue durable et ajustement gratuit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-image-gallery">
+            <div class="gallery-main">
+              <img src="Img/Pose de perruque naturel1.jpg" alt="Pose de perruque élégante" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="Img/Pose de perruque naturel2.jfif" alt="Perruque 1" class="thumb active" data-src="Img/Pose de perruque naturel2.jfif">
+              <img src="Img/Pose de perruque naturel3.jfif" alt="Perruque 2" class="thumb" data-src="Img/Pose de perruque naturel3.jfif">
+              <img src="Img/Pose de perruque naturel4.jfif" alt="Perruque 3" class="thumb" data-src="Img/Pose de perruque naturel4.jfif">
+              <img src="Img/Pose de perruque naturel5.jfif" alt="Perruque 4" class="thumb" data-src="Img/Pose de perruque naturel5.jfif">
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="services-list">
+          <h2>Nos prestations pose de perruques</h2>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-magic"></i> Pose de Perruques</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Pose simple</h4>
+                  <span class="price">8000 FCFA</span>
+                </div>
+                <p>Pose basique avec ajustement et finition</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Pose avec tresses</h4>
+                  <span class="price">15000 FCFA</span>
+                </div>
+                <p>Pose avec tresses de base et ajustement</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Pose complète</h4>
+                  <span class="price">20000 FCFA</span>
+                </div>
+                <p>Pose avec tresses, ajustement et coiffage</p>
+                <span class="duration"><i class="fas fa-clock"></i> 4h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-cut"></i> Extensions et Tresses</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Extensions simples</h4>
+                  <span class="price">12000 FCFA</span>
+                </div>
+                <p>Pose d'extensions naturelles ou synthétiques</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Tresses avec extensions</h4>
+                  <span class="price">18000 FCFA</span>
+                </div>
+                <p>Tresses élaborées avec extensions intégrées</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Pose de mèches</h4>
+                  <span class="price">10000 FCFA</span>
+                </div>
+                <p>Pose de mèches pour volume et longueur</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-tools"></i> Entretien et Ajustement</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Ajustement perruque</h4>
+                  <span class="price">5000 FCFA</span>
+                </div>
+                <p>Ajustement et repositionnement de la perruque</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Entretien complet</h4>
+                  <span class="price">8000 FCFA</span>
+                </div>
+                <p>Nettoyage, démêlage et soins de la perruque</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Réparation perruque</h4>
+                  <span class="price">10000 FCFA</span>
+                </div>
+                <p>Réparation et restauration de perruques abîmées</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="why-choose-us">
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+          <div class="reasons-grid">
+            <div class="reason-item">
+              <i class="fas fa-award"></i>
+              <h3>Expertise reconnue</h3>
+              <p>Plus de 10 ans d'expérience en pose de perruques</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-leaf"></i>
+              <h3>Produits de qualité</h3>
+              <p>Utilisation de perruques et produits haut de gamme</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-heart"></i>
+              <h3>Conseils personnalisés</h3>
+              <p>Recommandations adaptées à votre type de cheveux</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-clock"></i>
+              <h3>Suivi post-pose</h3>
+              <p>Accompagnement et ajustements gratuits</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="service-testimonials">
+          <h2>Avis de nos clientes</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Fatou D.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Pose complète</span>
+              </div>
+              <p>"Ma perruque est parfaite ! Anna a fait un travail exceptionnel. Le résultat est naturel et dure longtemps."</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Mariam K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Extensions</span>
+              </div>
+              <p>"Extensions parfaites ! Le volume et la longueur sont exactement ce que je voulais. Je recommande !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Adama S.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Entretien</span>
+              </div>
+              <p>"Service d'entretien impeccable. Ma perruque est comme neuve après le soin !"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="service-cta">
+          <h2>Prête à transformer votre look ?</h2>
+          <p>Prenez rendez-vous dès maintenant pour une consultation personnalisée</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20pose%20de%20perruques" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20pose%20de%20perruques" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>

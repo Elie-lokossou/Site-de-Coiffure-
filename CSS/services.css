@@ -1,0 +1,255 @@
+/* ===== PAGE SERVICES ===== */
+
+/* Hero spécifique aux services */
+.services-hero {
+  /* Unifier avec le style du HERO d'accueil */
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.services-hero .hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Image de fond façon home */
+.services-hero .hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.services-hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Section services overview */
+.services-overview {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-overlay {
+  opacity: 1;
+}
+
+.service-content {
+  padding: 30px;
+}
+
+.service-content h3 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.service-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-features span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.service-features i {
+  color: var(--primary);
+}
+
+/* CTA Section */
+.services-cta {
+  text-align: center;
+  background: var(--bg-white);
+  padding: 60px;
+  border-radius: var(--radius);
+  margin-top: 60px;
+  box-shadow: var(--shadow);
+}
+
+.services-cta h3 {
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.services-cta p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 0;
+  background: var(--bg-white);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.faq-item {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
+}
+
+.faq-item h3 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services-hero .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .service-image {
+    height: 200px;
+  }
+  
+  .services-cta {
+    padding: 40px 20px;
+  }
+  
+  .services-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .faq-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .service-content {
+    padding: 20px;
+  }
+  
+  .service-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

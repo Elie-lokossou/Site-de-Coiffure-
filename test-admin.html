@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Admin - Ana Coiffure</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="CSS/admin-dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Ana Coiffure</span>
+                <span class="admin-badge">Admin</span>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <div class="user-menu">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Administrateur</span>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Déconnexion
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Tableau de bord</span>
+            </a>
+            <a href="#analytics" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+            <a href="#offers" class="nav-item">
+                <i class="fas fa-tags"></i>
+                <span>Offres</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="dashboard" class="content-section active">
+            <div class="section-header">
+                <h1>Tableau de bord</h1>
+                <p>Vue d'ensemble de votre salon de coiffure</p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Visiteurs</h3>
+                        <p class="kpi-number">1,247</p>
+                        <span class="kpi-change positive">+12.5%</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Rendez-vous</h3>
+                        <p class="kpi-number">23</p>
+                        <span class="kpi-change positive">+8.3%</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Note moyenne</h3>
+                        <p class="kpi-number">4.8</p>
+                        <span class="kpi-change positive">+0.2</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Revenus</h3>
+                        <p class="kpi-number">€2,450</p>
+                        <span class="kpi-change positive">+15.2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Section -->
+            <div class="activity-section">
+                <h3>Test de l'interface</h3>
+                <p>Si vous voyez cette section avec un style moderne, l'interface fonctionne correctement !</p>
+                <button class="btn-primary">
+                    <i class="fas fa-check"></i> Test réussi
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Test simple
+        console.log('Test Admin Dashboard chargé');
+        
+        // Test des styles
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.admin-header');
+            const sidebar = document.querySelector('.admin-sidebar');
+            const mainContent = document.querySelector('.main-content');
+            
+            if (header && sidebar && mainContent) {
+                console.log('✅ Tous les éléments sont présents');
+                console.log('✅ CSS chargé correctement');
+            } else {
+                console.log('❌ Problème avec les éléments HTML');
+            }
+        });
+    </script>
+</body>
+</html>
+
+

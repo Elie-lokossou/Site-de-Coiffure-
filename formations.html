@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations - Ana Coiffure</title>
+  <meta name="description" content="Découvrez nos formations en coiffure : cours pour débutants et confirmés, spécialisation en nouage de foulards, techniques modernes et traditionnelles. Devenez professionnel !">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Ana Coiffure - Formations",
+    "description": "Formations en coiffure et nouage de foulards",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    },
+    "areaServed": "Cotonou",
+    "serviceType": "Formation"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <link rel="stylesheet" href="CSS/service-detail.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html" class="active">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO SECTION -->
+    
+
+    <!-- SERVICE DETAILS -->
+    <section id="formations-details" class="service-details">
+      <div class="container">
+        <div class="service-overview">
+          <div class="service-info">
+            <h2>Notre expertise en formation</h2>
+            <p>Ana Coiffure propose des formations complètes pour tous les niveaux, du débutant au professionnel confirmé. Nos cours combinent théorie et pratique pour vous donner toutes les compétences nécessaires dans le domaine de la coiffure et du nouage de foulards.</p>
+            
+            <div class="service-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Durée</h4>
+                  <p>1 semaine à 3 mois selon le programme</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Prix</h4>
+                  <p>À partir de 50000 FCFA</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Certification</h4>
+                  <p>Attestation de formation professionnelle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-image-gallery">
+            <div class="gallery-main">
+              <img src="Img/Formation.jfif" alt="Formation en coiffure" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="Img/nouage foulards.jfif" alt="Formation 1" class="thumb active" data-src="Img/image20.jfif">
+              <img src="Img/Coiffure Dame10.jfif" alt="Formation 2" class="thumb" data-src="Img/image23.jfif">
+              <img src="Img/Coiffure Enfant1.jfif" alt="Formation 3" class="thumb" data-src="Img/image3.jfif">
+              <img src="Img/Coupe homme2.jfif" alt="Formation 4" class="thumb" data-src="Img/image17.jfif">
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="services-list">
+          <h2>Nos programmes de formation</h2>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-graduation-cap"></i> Formation Complète</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Formation complète coiffure</h4>
+                  <span class="price">150000 FCFA</span>
+                </div>
+                <p>Programme complet : bases, techniques avancées, gestion</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3 mois</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Formation intensive</h4>
+                  <span class="price">80000 FCFA</span>
+                </div>
+                <p>Formation accélérée sur 1 mois</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1 mois</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Formation weekend</h4>
+                  <span class="price">50000 FCFA</span>
+                </div>
+                <p>Cours les weekends pour les actifs</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2 mois</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-crown"></i> Spécialisation Foulards</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Formation nouage foulards</h4>
+                  <span class="price">60000 FCFA</span>
+                </div>
+                <p>Spécialisation en techniques de nouage</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1 mois</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Stage foulards cérémonie</h4>
+                  <span class="price">30000 FCFA</span>
+                </div>
+                <p>Techniques spéciales pour cérémonies</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1 semaine</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Atelier créatif foulards</h4>
+                  <span class="price">20000 FCFA</span>
+                </div>
+                <p>Création de styles uniques et personnalisés</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3 jours</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-tools"></i> Modules Spécialisés</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Module coiffure dames</h4>
+                  <span class="price">40000 FCFA</span>
+                </div>
+                <p>Techniques spécifiques coiffure féminine</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2 semaines</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Module coiffure hommes</h4>
+                  <span class="price">35000 FCFA</span>
+                </div>
+                <p>Spécialisation coiffure masculine</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2 semaines</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Module onglerie</h4>
+                  <span class="price">45000 FCFA</span>
+                </div>
+                <p>Formation complète en onglerie</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3 semaines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="why-choose-us">
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+          <div class="reasons-grid">
+            <div class="reason-item">
+              <i class="fas fa-award"></i>
+              <h3>Expertise reconnue</h3>
+              <p>Plus de 10 ans d'expérience dans la formation</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-leaf"></i>
+              <h3>Pratique intensive</h3>
+              <p>70% de pratique, 30% de théorie</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-heart"></i>
+              <h3>Suivi personnalisé</h3>
+              <p>Accompagnement individuel pendant la formation</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-clock"></i>
+              <h3>Flexibilité</h3>
+              <p>Horaires adaptés à votre disponibilité</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="service-testimonials">
+          <h2>Témoignages de nos stagiaires</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Fatou D.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Formation complète</span>
+              </div>
+              <p>"Formation exceptionnelle ! J'ai ouvert mon salon 3 mois après. Anna est une excellente formatrice !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Mariam K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Spécialisation foulards</span>
+              </div>
+              <p>"J'ai appris des techniques uniques que je n'aurais jamais imaginées. Très satisfaite !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Adama S.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Formation weekend</span>
+              </div>
+              <p>"Parfait pour concilier travail et formation. Horaires flexibles et contenu de qualité."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="service-cta">
+          <h2>Prêt(e) à devenir professionnel ?</h2>
+          <p>Inscrivez-vous dès maintenant à nos formations et transformez votre passion en carrière</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20les%20formations" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20les%20formations" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>
+
+
+
+

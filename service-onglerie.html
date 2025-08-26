@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Onglerie - Ana Coiffure</title>
+
+  <meta name="description" content="Découvrez nos services d'onglerie : manucure, pose gel, vernis semi-permanent et nail art pour des mains parfaites. Expertise et qualité garanties.">
+
+  
+
+  <!-- Schema.org pour SEO -->
+
+  <script type="application/ld+json">
+
+  {
+
+    "@context": "https://schema.org",
+
+    "@type": "Service",
+
+    "name": "Onglerie",
+
+    "description": "Services d'onglerie incluant manucure, pose gel, vernis semi-permanent et nail art",
+
+    "provider": {
+
+      "@type": "BeautySalon",
+
+      "name": "Ana Coiffure",
+
+      "address": {
+
+        "@type": "PostalAddress",
+
+        "addressLocality": "Cotonou",
+
+        "addressRegion": "Littoral",
+
+        "addressCountry": "BJ"
+
+      },
+
+      "telephone": "+2290197463209"
+
+    },
+
+    "areaServed": "Cotonou",
+
+    "serviceType": "Onglerie"
+
+  }
+
+  </script>
+
+
+
+  <!-- Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <link rel="stylesheet" href="CSS/service-detail.css">
+
+  <link rel="stylesheet" href="CSS/responsive.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <nav class="container">
+
+      <a href="index.html" class="logo">AnaCoiffure</a>
+
+      <ul class="nav-links">
+
+        <li><a href="index.html">Accueil</a></li>
+
+        <li><a href="services.html" class="active">Services</a></li>
+
+        <li><a href="galerie.html">Galerie</a></li>
+
+        <li><a href="formations.html">Formations</a></li>
+
+        <li><a href="temoignages.html">Témoignages</a></li>
+
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- SERVICE DETAILS -->
+
+    <section class="service-details">
+
+      <div class="container">
+
+        <div class="service-overview">
+
+          <div class="service-info">
+
+            <h2>Notre expertise en onglerie</h2>
+
+            <p>Chez Ana Coiffure, nous proposons des services d'onglerie complets pour sublimer vos mains. Notre équipe qualifiée maîtrise les dernières techniques et utilise des produits de qualité pour vous offrir des résultats durables et élégants.</p>
+
+            
+
+            <div class="service-highlights">
+
+              <div class="highlight-item">
+
+                <i class="fas fa-clock"></i>
+
+                <div>
+
+                  <h4>Durée</h4>
+
+                  <p>45 minutes à 1h30 selon le service</p>
+
+                </div>
+
+              </div>
+
+              <div class="highlight-item">
+
+                <i class="fas fa-star"></i>
+
+                <div>
+
+                  <h4>Prix</h4>
+
+                  <p>À partir de 4000 FCFA</p>
+
+                </div>
+
+              </div>
+
+              <div class="highlight-item">
+
+                <i class="fas fa-shield-alt"></i>
+
+                <div>
+
+                  <h4>Garantie</h4>
+
+                  <p>Produits hypoallergéniques et durables</p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          
+
+          <div class="service-image-gallery">
+
+            <div class="gallery-main">
+
+              <img src="Img/Onglerie.jpg" alt="Onglerie élégante" id="mainImage">
+
+            </div>
+
+            <div class="gallery-thumbs">
+
+              <img src="Img/Onglerie1.jfif" alt="Onglerie 1" class="thumb active" data-src="Img/Onglerie1.jfif">
+
+              <img src="Img/Onglerie2.jfif" alt="Onglerie 2" class="thumb" data-src="Img/Onglerie2.jfif">
+
+              <img src="Img/Onglerie3.jfif" alt="Onglerie 3" class="thumb" data-src="Img/Onglerie3.jfif">
+
+              <img src="Img/Onglerie4.jfif" alt="Onglerie 4" class="thumb" data-src="Img/Onglerie4.jfif">
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SERVICES LIST -->
+
+        <div class="services-list">
+
+          <h2>Nos prestations onglerie</h2>
+
+          
+
+          <div class="service-category">
+
+            <h3><i class="fas fa-hand-sparkles"></i> Manucure et Soins</h3>
+
+            <div class="service-items">
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Manucure simple</h4>
+
+                  <span class="price">4000 FCFA</span>
+
+                </div>
+
+                <p>Soins des mains avec vernis classique</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 45min</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Manucure complète</h4>
+
+                  <span class="price">6000 FCFA</span>
+
+                </div>
+
+                <p>Soins complets avec gommage et masque</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Soins des cuticules</h4>
+
+                  <span class="price">3000 FCFA</span>
+
+                </div>
+
+                <p>Traitement spécialisé des cuticules</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 30min</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="service-category">
+
+            <h3><i class="fas fa-palette"></i> Vernis et Finitions</h3>
+
+            <div class="service-items">
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Vernis semi-permanent</h4>
+
+                  <span class="price">8000 FCFA</span>
+
+                </div>
+
+                <p>Vernis longue durée avec finition soignée</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Pose gel</h4>
+
+                  <span class="price">12000 FCFA</span>
+
+                </div>
+
+                <p>Pose gel pour une tenue parfaite</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 1h30</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Remplissage gel</h4>
+
+                  <span class="price">8000 FCFA</span>
+
+                </div>
+
+                <p>Remplissage et retouche du gel existant</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="service-category">
+
+            <h3><i class="fas fa-magic"></i> Nail Art et Décoration</h3>
+
+            <div class="service-items">
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Nail art simple</h4>
+
+                  <span class="price">5000 FCFA</span>
+
+                </div>
+
+                <p>Décoration simple avec strass ou stickers</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 30min</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Nail art élaboré</h4>
+
+                  <span class="price">10000 FCFA</span>
+
+                </div>
+
+                <p>Création artistique personnalisée</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+
+              </div>
+
+              
+
+              <div class="service-item">
+
+                <div class="service-item-header">
+
+                  <h4>Dégradé et effets</h4>
+
+                  <span class="price">7000 FCFA</span>
+
+                </div>
+
+                <p>Effets spéciaux et dégradés de couleurs</p>
+
+                <span class="duration"><i class="fas fa-clock"></i> 45min</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- WHY CHOOSE US -->
+
+        <div class="why-choose-us">
+
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+
+          <div class="reasons-grid">
+
+            <div class="reason-item">
+
+              <i class="fas fa-award"></i>
+
+              <h3>Expertise technique</h3>
+
+              <p>Formation continue aux dernières techniques</p>
+
+            </div>
+
+            <div class="reason-item">
+
+              <i class="fas fa-leaf"></i>
+
+              <h3>Produits sains</h3>
+
+              <p>Utilisation de produits hypoallergéniques</p>
+
+            </div>
+
+            <div class="reason-item">
+
+              <i class="fas fa-heart"></i>
+
+              <h3>Créativité</h3>
+
+              <p>Designs personnalisés selon vos goûts</p>
+
+            </div>
+
+            <div class="reason-item">
+
+              <i class="fas fa-clock"></i>
+
+              <h3>Durabilité</h3>
+
+              <p>Résultats qui durent dans le temps</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TESTIMONIALS -->
+
+        <div class="service-testimonials">
+
+          <h2>Avis de nos clientes</h2>
+
+          <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+
+              <div class="testimonial-header">
+
+                <div class="client-info">
+
+                  <h4>Fatou D.</h4>
+
+                  <div class="stars">
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                  </div>
+
+                </div>
+
+                <span class="service-type">Pose gel</span>
+
+              </div>
+
+              <p>"Ma pose gel est parfaite ! Elle dure plus de 3 semaines sans problème. Je recommande !"</p>
+
+            </div>
+
+            
+
+            <div class="testimonial-card">
+
+              <div class="testimonial-header">
+
+                <div class="client-info">
+
+                  <h4>Mariam K.</h4>
+
+                  <div class="stars">
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                  </div>
+
+                </div>
+
+                <span class="service-type">Nail art</span>
+
+              </div>
+
+              <p>"Nail art magnifique ! Anna a créé exactement ce que je voulais. Très créative !"</p>
+
+            </div>
+
+            
+
+            <div class="testimonial-card">
+
+              <div class="testimonial-header">
+
+                <div class="client-info">
+
+                  <h4>Adama S.</h4>
+
+                  <div class="stars">
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                    <i class="fas fa-star"></i>
+
+                  </div>
+
+                </div>
+
+                <span class="service-type">Manucure</span>
+
+              </div>
+
+              <p>"Service impeccable ! Mes mains sont douces et mes ongles parfaits."</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CTA SECTION -->
+
+        <div class="service-cta">
+
+          <h2>Prête à sublimer vos mains ?</h2>
+
+          <p>Prenez rendez-vous dès maintenant pour une consultation personnalisée</p>
+
+          <div class="cta-buttons">
+
+            
+
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20l'onglerie" class="btn btn-secondary" target="_blank">
+
+              <i class="fab fa-whatsapp"></i> Nous contacter
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <!-- Infos -->
+
+      <div class="footer-section">
+
+        <h3>Ana Coiffure</h3>
+
+        <p>Agla Hlazouto, Cotonou</p>
+
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+
+        <p>Spécialiste en nouage de foulards</p>
+
+      </div>
+
+
+
+      <!-- Services -->
+
+      <div class="footer-section">
+
+        <h3>Nos Services</h3>
+
+        <ul>
+
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+
+          <li><a href="formations.html">Formations</a></li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- Horaires -->
+
+      <div class="footer-section">
+
+        <h3>Horaires</h3>
+
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+
+        <p>Dimanche : Fermé</p>
+
+        <p>Fermeture : Jours fériés</p>
+
+      </div>
+
+
+
+      <!-- Réseaux -->
+
+      <div class="footer-section">
+
+        <h3>Réseaux</h3>
+
+        <div class="social-icons">
+
+          <a href="https://facebook.com/anacoiffure" target="_blank" aria-label="Facebook">
+
+            <i class="fab fa-facebook"></i>
+
+          </a>
+
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+
+            <i class="fab fa-whatsapp"></i>
+
+          </a>
+
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Newsletter -->
+
+      <div class="footer-section newsletter-section">
+
+        <h3>Newsletter</h3>
+
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+
+        <form id="newsletterForm" class="newsletter-form">
+
+          <div class="newsletter-input-group">
+
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+
+            <button type="submit" class="newsletter-btn">
+
+              <i class="fas fa-paper-plane"></i>
+
+            </button>
+
+          </div>
+
+          <div class="newsletter-message" id="newsletterMessage"></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="container copyright">
+
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+
+      <a href="mentions-legales.html">Mentions légales</a> | 
+
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- RDV MODAL -->
+
+  <div class="modal" id="rdvModal" aria-hidden="true">
+
+    <div class="modal-content">
+
+      <button class="modal-close" id="closeRdv">&times;</button>
+
+      <h3>Réservation — Onglerie</h3>
+
+      <form id="rdvForm">
+
+        <div class="form-group">
+
+          <label for="rname">Nom complet *</label>
+
+          <input type="text" id="rname" name="rname" required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="rphone">Téléphone *</label>
+
+          <input type="tel" id="rphone" name="rphone" placeholder="+229..." required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="rservice">Service *</label>
+
+          <select id="rservice" name="rservice" required>
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="manucure-simple">Manucure simple</option>
+
+            <option value="manucure-complete">Manucure complète</option>
+
+            <option value="soins-cuticules">Soins des cuticules</option>
+
+            <option value="vernis-semi-permanent">Vernis semi-permanent</option>
+
+            <option value="pose-gel">Pose gel</option>
+
+            <option value="remplissage-gel">Remplissage gel</option>
+
+            <option value="nail-art-simple">Nail art simple</option>
+
+            <option value="nail-art-elabore">Nail art élaboré</option>
+
+            <option value="degrade-effets">Dégradé et effets</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="rdate">Date souhaitée *</label>
+
+          <input type="date" id="rdate" name="rdate" required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="rnote">Préférences ou notes</label>
+
+          <textarea id="rnote" name="rnote" rows="3" placeholder="Décrivez vos préférences, couleurs souhaitées..."></textarea>
+
+        </div>
+
+        <div class="form-actions">
+
+          <button type="submit" class="btn btn-primary">Réserver</button>
+
+          <button type="button" class="btn btn-secondary" id="sendWhats">
+
+            <i class="fab fa-whatsapp"></i> WhatsApp
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FLOATING ACTIONS -->
+
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20l'onglerie" target="_blank" rel="noopener">
+
+    <i class="fab fa-whatsapp"></i> WhatsApp
+
+  </a>
+
+
+
+  <button class="rdv-fab" id="openRdvBtn3">
+
+    <i class="fas fa-calendar-alt"></i> RDV
+
+  </button>
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+
+  <script src="js/service-detail.js"></script>
+
+</body>
+
+</html>

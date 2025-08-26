@@ -1,0 +1,342 @@
+/* ===== AMÉLIORATIONS RESPONSIVE ===== */
+
+/* Variables pour les breakpoints */
+:root {
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --large: 1200px;
+}
+
+/* ===== AMÉLIORATIONS GÉNÉRALES RESPONSIVE ===== */
+
+/* Amélioration de la lisibilité sur mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Évite le zoom automatique sur iOS */
+    line-height: 1.6;
+  }
+  
+  /* Amélioration des conteneurs */
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+  
+  /* Amélioration des titres */
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.3rem; }
+  
+  /* Amélioration des espacements */
+  .section {
+    padding: 40px 0;
+  }
+  
+  /* Amélioration des grilles */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Amélioration des cartes */
+  .card {
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}
+
+/* ===== AMÉLIORATIONS SPÉCIFIQUES MOBILE ===== */
+@media (max-width: 480px) {
+  /* Optimisation pour très petits écrans */
+  .container {
+    width: 98%;
+    padding: 0 10px;
+  }
+  
+  /* Amélioration du menu mobile pour très petits écrans */
+  .nav-links {
+    top: 70px; /* Réduire l'espace en haut */
+    height: calc(100vh - 70px);
+    padding: 15px;
+  }
+  
+  .nav-links a {
+    font-size: 1rem; /* Réduire encore la taille de police */
+    padding: 12px 0;
+  }
+  
+  /* Réduction des tailles de police */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  
+  /* Amélioration des boutons */
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Amélioration des formulaires */
+  input, textarea, select {
+    font-size: 16px; /* Évite le zoom sur iOS */
+    padding: 12px 15px;
+  }
+  
+  /* Amélioration des espacements */
+  .section {
+    padding: 30px 0;
+  }
+  
+  /* Amélioration des marges */
+  .mb-1 { margin-bottom: 0.5rem; }
+  .mb-2 { margin-bottom: 1rem; }
+  .mb-3 { margin-bottom: 1.5rem; }
+  .mb-4 { margin-bottom: 2rem; }
+}
+
+/* ===== AMÉLIORATIONS TABLETTE ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Optimisations pour tablettes */
+  .container {
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  /* Grilles adaptées pour tablettes */
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Amélioration des cartes */
+  .card {
+    padding: 25px;
+  }
+}
+
+/* ===== AMÉLIORATIONS ACCESSIBILITÉ ===== */
+
+/* Amélioration du focus pour l'accessibilité */
+@media (prefers-reduced-motion: no-preference) {
+  .btn:focus,
+  .nav-links a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Mode sombre automatique */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: #1a1a1a;
+    --bg-white: #2d2d2d;
+    --text-dark: #ffffff;
+    --text-light: #cccccc;
+    --border: #404040;
+  }
+}
+
+/* Amélioration pour les écrans haute densité */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimisation des images pour les écrans Retina */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===== AMÉLIORATIONS PERFORMANCE ===== */
+
+/* Optimisation des animations pour les appareils moins puissants */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== AMÉLIORATIONS SPÉCIFIQUES AUX SERVICES ===== */
+
+@media (max-width: 768px) {
+  /* Amélioration des cartes de services */
+  .service-card {
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Amélioration des galeries */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  /* Amélioration des témoignages */
+  .testimonial-card {
+    margin: 0 10px 20px;
+    padding: 20px;
+  }
+  
+  .testimonial-card blockquote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ===== AMÉLIORATIONS FOOTER ===== */
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-section {
+    padding: 0 15px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== AMÉLIORATIONS FORMULAIRES ===== */
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 25px;
+    margin: 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* ===== AMÉLIORATIONS HERO SECTION ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    padding: 25px;
+    max-width: 90%;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .hero-content {
+    padding: 20px;
+    max-width: 95%;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

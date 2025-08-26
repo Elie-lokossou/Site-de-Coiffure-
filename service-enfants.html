@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coiffure Enfants - Ana Coiffure</title>
+  <meta name="description" content="Découvrez nos services de coiffure pour enfants : coupes adaptées, soins doux et ambiance conviviale. Expertise et patience garanties pour les plus jeunes.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Coiffure Enfants",
+    "description": "Services de coiffure pour enfants incluant coupes adaptées et soins doux",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    },
+    "areaServed": "Cotonou",
+    "serviceType": "Coiffure Enfants"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/service-detail.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- SERVICE DETAILS -->
+    <section id="service-details" class="service-details">
+      <div class="container">
+        <div class="service-overview">
+          <div class="service-info">
+            <h2>Notre expertise en coiffure enfants</h2>
+            <p>Chez Ana Coiffure, nous proposons des services spécialement adaptés aux enfants. Notre équipe est formée pour créer une ambiance conviviale et rassurante, tout en réalisant des coupes élégantes et pratiques pour les plus jeunes.</p>
+            
+            <div class="service-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Durée</h4>
+                  <p>30 minutes à 1 heure selon l'âge</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Prix</h4>
+                  <p>À partir de 3000 FCFA</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Garantie</h4>
+                  <p>Produits doux et techniques adaptées</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-image-gallery">
+            <div class="gallery-main">
+              <img src="Img/Coiffure Enfant1.jfif" alt="Coiffure enfant élégante" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="Img/Coiffure Enfant2.jfif" alt="Enfant 1" class="thumb active" data-src="Img/Coiffure Enfant2.jfif">
+              <img src="Img/Coiffure enfant3.jfif" alt="Enfant 2" class="thumb" data-src="Img/Coiffure enfant3.jfif">
+              <img src="Img/Coupe homme4.jfif" alt="Enfant 3" class="thumb" data-src="Img/Coupe homme4.jfif">
+              <img src="Img/Coiffure Enfant1.jfif" alt="Enfant 4" class="thumb" data-src="Img/Coiffure Enfant1.jfif">
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="services-list">
+          <h2>Nos prestations coiffure enfants</h2>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-baby"></i> Petits (2-6 ans)</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe simple</h4>
+                  <span class="price">3000 FCFA</span>
+                </div>
+                <p>Coupe basique et rapide pour les tout-petits</p>
+                <span class="duration"><i class="fas fa-clock"></i> 30min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe avec soins</h4>
+                  <span class="price">5000 FCFA</span>
+                </div>
+                <p>Coupe + soins du cuir chevelu</p>
+                <span class="duration"><i class="fas fa-clock"></i> 45min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe cérémonie</h4>
+                  <span class="price">7000 FCFA</span>
+                </div>
+                <p>Coupe élégante pour occasions spéciales</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-child"></i> Moyens (7-12 ans)</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe classique</h4>
+                  <span class="price">4000 FCFA</span>
+                </div>
+                <p>Coupe traditionnelle et soignée</p>
+                <span class="duration"><i class="fas fa-clock"></i> 45min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe tendance</h4>
+                  <span class="price">6000 FCFA</span>
+                </div>
+                <p>Coupe moderne selon les tendances</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe avec brushing</h4>
+                  <span class="price">8000 FCFA</span>
+                </div>
+                <p>Coupe + mise en forme avec brushing</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h15</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-star"></i> Services Spécialisés</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Soins anti-poux</h4>
+                  <span class="price">5000 FCFA</span>
+                </div>
+                <p>Traitement préventif et curatif</p>
+                <span class="duration"><i class="fas fa-clock"></i> 30min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Démêlage spécial</h4>
+                  <span class="price">4000 FCFA</span>
+                </div>
+                <p>Démêlage en douceur des cheveux</p>
+                <span class="duration"><i class="fas fa-clock"></i> 20min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Package anniversaire</h4>
+                  <span class="price">10000 FCFA</span>
+                </div>
+                <p>Coupe + brushing + accessoires</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="why-choose-us">
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+          <div class="reasons-grid">
+            <div class="reason-item">
+              <i class="fas fa-award"></i>
+              <h3>Patience et douceur</h3>
+              <p>Équipe formée pour rassurer les enfants</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-leaf"></i>
+              <h3>Produits adaptés</h3>
+              <p>Utilisation de produits doux et hypoallergéniques</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-heart"></i>
+              <h3>Ambiance conviviale</h3>
+              <p>Espace dédié et accueillant pour les enfants</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-clock"></i>
+              <h3>Rapidité</h3>
+              <p>Services rapides pour éviter l'impatience</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="service-testimonials">
+          <h2>Avis des parents</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Fatou D.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Coupe cérémonie</span>
+              </div>
+              <p>"Ma fille de 5 ans était ravie ! Anna a été très patiente et douce. Résultat magnifique !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Mariam K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Package anniversaire</span>
+              </div>
+              <p>"Service parfait pour l'anniversaire de ma fille ! Elle était aux anges !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Adama S.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Soins anti-poux</span>
+              </div>
+              <p>"Traitement efficace et en douceur. Mon fils n'a plus de problèmes !"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="service-cta">
+          <h2>Prêt(e) à gâter votre enfant ?</h2>
+          <p>Prenez rendez-vous dès maintenant pour une expérience unique</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20coiffure%20enfants" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20coiffure%20enfants" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>

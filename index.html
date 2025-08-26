@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana Coiffure — Salon de coiffure à Agla Hlazouto</title>
+  <meta name="description" content="Ana Coiffure — salon de coiffure pour hommes & dames à Agla Hlazouto : coiffure, pose de perruques, onglerie, massages, nouage de foulards, taille de barbe et formations. Réservez via WhatsApp." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- JSON-LD local business -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Ana Coiffure",
+    "description":"Salon de coiffure pour hommes et dames - pose de perruques, onglerie, massages, nouage de foulards, taille de barbe et formations. Agla Hlazouto, Cotonou.",
+    "telephone":"+2290197463209",
+    "address":{"@type":"PostalAddress","streetAddress":"Agla Hlazouto","addressLocality":"Cotonou","addressCountry":"BJ"},
+    "openingHours":["Mo-Sa 09:00-19:00"],
+    "url":"https://anacoiffure.com"
+  }
+  </script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/components.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="connexion.html" class="btn-login"><i class="fas fa-user"></i> Connexion</a></li>
+      </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+  </header>
+
+  <main style="padding-top:86px;">
+    <!-- HERO -->
+    <section class="hero" aria-label="Ana Coiffure - Salon à Agla Hlazouto">
+      <video autoplay loop muted playsinline poster="Videos/Carrousel2.mp4">
+        <source src="Videos/Carrousel2.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <div class="hero-content">
+        <h1>Ana Coiffure — Salon de beauté à Agla Hlazouto</h1>
+        <p>Coiffure Hommes & Dames • Pose de perruques • Onglerie • Massages • Nouage de foulards</p>
+        <div class="hero-buttons">
+          <a class="cta-button" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20prendre%20un%20RDV" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Réserver via WhatsApp
+          </a>
+          <a class="cta-button secondary" href="services.html">
+            <i class="fas fa-scissors"></i> Découvrir nos services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Nos Services — Hommes & Dames</h2>
+        <p class="lead">Des prestations professionnelles pour sublimer chaque client·e — hygiène garantie et accueil chaleureux.</p>
+
+        <div class="services-grid" role="list">
+          <!-- Femmes -->
+          <div class="service-card" role="listitem" onclick="window.location.href='service-coiffure-dames.html'">
+            <div class="service-icon">
+              <img src="Img/Coiffure Dame7.jpg" alt="Coiffure Dames" loading="lazy">
+            </div>
+            <h3 class="service-title">Coiffure & Coupes (Dames)</h3>
+            <p class="service-description">Coupe, brushing, coiffures de jour et soirée, coiffures événementielles. Diagnostic personnalisé.</p>
+            <div class="service-price">À partir de 5000 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='service-perruques.html'">
+            <div class="service-icon">
+              <img src="Img/Pose de perruque naturel1.jpg" alt="Pose de Perruques" loading="lazy">
+            </div>
+            <h3 class="service-title">Pose de Perruques & Extensions</h3>
+            <p class="service-description">Pose pro, ajustement naturel et conseils d'entretien pour une tenue durable.</p>
+            <div class="service-price">À partir de 15000 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='service-onglerie.html'">
+            <div class="service-icon">
+              <img src="Img/Onglerie.jpg" alt="Onglerie" loading="lazy">
+            </div>
+            <h3 class="service-title">Onglerie (Dames)</h3>
+            <p class="service-description">Manucure, pose gel, vernis semi-permanent — finitions soignées pour des mains parfaites.</p>
+            <div class="service-price">À partir de 3000 FCFA</div>
+          </div>
+
+          <!-- Hommes -->
+          <div class="service-card" role="listitem" onclick="window.location.href='service-coiffure-hommes.html'">
+            <div class="service-icon">
+              <img src="Img/Coupe homme.jpg" alt="Coiffure Hommes" loading="lazy">
+            </div>
+            <h3 class="service-title">Coupe Homme & Styling</h3>
+            <p class="service-description">Coupe moderne ou classique, dégradés, entretien du look et conseils coiffants.</p>
+            <div class="service-price">À partir de 2500 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='service-barbe.html'">
+            <div class="service-icon">
+              <img src="Img/Barbe1.jpg" alt="Taille de Barbe" loading="lazy">
+            </div>
+            <h3 class="service-title">Taille & Entretien de Barbe</h3>
+            <p class="service-description">Taille nette, contours précis et soins de la peau — conseils pour l'entretien à domicile.</p>
+            <div class="service-price">À partir de 2000 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='service-enfants.html'">
+            <div class="service-icon">
+              <img src="Img/Coupe garçons.jpg" alt="Coupe Enfants" loading="lazy">
+            </div>
+            <h3 class="service-title">Coupe Enfant & Adolescent</h3>
+            <p class="service-description">Coupe rapide, accueil patient et coupe adaptée aux plus jeunes.</p>
+            <div class="service-price">À partir de 1500 FCFA</div>
+          </div>
+
+          <!-- Commun -->
+          <div class="service-card" role="listitem" onclick="window.location.href='service-massage.html'">
+            <div class="service-icon">
+              <img src="Img/Massage.jpg" alt="Massages" loading="lazy">
+            </div>
+            <h3 class="service-title">Massages Relaxants</h3>
+            <p class="service-description">Courts massages détente pour compléter l'expérience salon (après soin ou coupe).</p>
+            <div class="service-price">À partir de 5000 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='service-foulards.html'">
+            <div class="service-icon">
+              <img src="Img/nouage foulards.jfif" alt="Nouage de Foulards" loading="lazy">
+            </div>
+            <h3 class="service-title">Nouage de Foulards (Spécialité)</h3>
+            <p class="service-description">Techniques traditionnelles et modernes pour cérémonies, travail ou style quotidien.</p>
+            <div class="service-price">À partir de 2000 FCFA</div>
+          </div>
+
+          <div class="service-card" role="listitem" onclick="window.location.href='formations.html'">
+            <div class="service-icon">
+              <img src="Img/Formation.jfif" alt="Formations" loading="lazy">
+            </div>
+            <h3 class="service-title">Formations Professionnelles</h3>
+            <p class="service-description">Ateliers pratiques : coupe, pose de perruque, nouage de foulard. Certificat remis.</p>
+            <div class="service-price">Sur demande</div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+          <a href="services.html" class="btn-primary">Voir tous nos services détaillés</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIQUES -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5000">0</div>
+            <div class="stat-label">Clients Satisfaits</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Années d'Expérience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Étudiants Formés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">% Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE PREVIEW -->
+    <section class="gallery-preview">
+      <div class="container">
+        <h2 class="section-title">Galerie </h2>
+        <p class="lead">Réalisations Hommes & Dames — cliquez pour agrandir.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="foulards">
+            <img src="Img/nouage foulards.jfif" alt="Nouage foulard - Soirée" loading="lazy">
+            <div class="gallery-overlay">
+              <h3>Nouage foulard - Soirée</h3>
+              <p>Ana Coiffure</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="perruques">
+            <img src="Img/Pose de perruque naturel1.jpg" alt="Pose perruque naturelle" loading="lazy">
+            <div class="gallery-overlay">
+              <h3>Pose perruque naturelle</h3>
+              <p>Ana Coiffure</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="hommes">
+            <img src="Img/Coupe homme.jpg" alt="Coupe Homme Moderne" loading="lazy">
+            <div class="gallery-overlay">
+              <h3>Coupe Homme Moderne</h3>
+              <p>Ana Coiffure</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="barbe">
+            <img src="Img/Barbe1.jpg" alt="Taille Barbe — Contour Précis" loading="lazy">
+            <div class="gallery-overlay">
+              <h3>Taille Barbe — Contour Précis</h3>
+              <p>Ana Coiffure</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+          <a href="galerie.html" class="btn-primary">Voir toute la galerie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS PREVIEW -->
+    <section class="testimonials-preview">
+      <div class="container">
+        <h2 class="section-title">Témoignages</h2>
+        <p class="lead">Ce que disent nos client·e·s.</p>
+
+        <div class="testimonials-slider">
+          <div class="testimonial active">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Anna m'a transformée — coupe parfaite et un accueil chaleureux. Je recommande !"</p>
+            <p class="testimonial-author">Fatou, Cotonou</p>
+            <p class="testimonial-service">Service : Coiffure Dame</p>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Atelier nouage très instructif. Maintenant je sais m'habiller pour chaque occasion."</p>
+            <p class="testimonial-author">Aïssata</p>
+            <p class="testimonial-service">Service : Formation Nouage</p>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Coupe homme impeccable et taille de barbe très précise. Top service !"</p>
+            <p class="testimonial-author">Youssouf</p>
+            <p class="testimonial-service">Service : Coupe Homme + Barbe</p>
+          </div>
+        </div>
+
+        <div class="slider-nav">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+          <a href="temoignages.html" class="btn-primary">Voir tous les témoignages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact & Réservation</h2>
+        <p class="lead">Envoyez-nous un message ou réservez directement via WhatsApp.</p>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Adresse</h3>
+                <p>Agla Hlazouto, Cotonou, Bénin</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+229 01 97 46 32 09</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Horaires</h3>
+                <p>Lundi - Samedi : 09:00 - 19:00</p>
+                <p>Dimanche : Fermé</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>Réservation rapide disponible</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+229..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email (facultatif)</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service souhaité *</label>
+              <select id="service" name="service" required>
+                <option value="">Sélectionner un service</option>
+                <option value="coiffure-dame">Coiffure — Dame</option>
+                <option value="pose-perruque">Pose de perruque</option>
+                <option value="onglerie">Onglerie</option>
+                <option value="massage">Massage</option>
+                <option value="nouage-foulard">Nouage de foulard</option>
+                <option value="formation">Formation</option>
+                <option value="coupe-homme">Coupe — Homme</option>
+                <option value="taille-barbe">Taille / Entretien barbe</option>
+                <option value="coupe-enfant">Coupe — Enfant</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date souhaitée (facultatif)</label>
+              <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message / Préférences</label>
+              <textarea id="message" name="message" placeholder="Décrivez vos préférences..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">J'accepte que mes données soient conservées pour la gestion du rendez-vous.</label>
+            </div>
+
+            <div class="form-buttons">
+              <button type="button" class="btn-whatsapp" id="contactWhats">
+                <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+              </button>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img src="" alt="Agrandissement" id="lightboxImg">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+  </div>
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
+

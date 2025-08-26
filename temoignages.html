@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - Ana Coiffure</title>
+  <meta name="description" content="Découvrez les avis et témoignages de nos clients satisfaits. Retours d'expérience sur nos services de coiffure, pose de perruques, onglerie et formations.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Témoignages - Ana Coiffure",
+    "description": "Avis et témoignages de clients sur les services d'Ana Coiffure",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <style>
+    /* Styles spécifiques pour les témoignages */
+    .testimonials-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 60px;
+      color: var(--accent);
+      opacity: 0.2;
+      font-family: serif;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .testimonial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .client-info h4 {
+      color: var(--primary);
+      margin: 0 0 5px 0;
+      font-size: 1.2rem;
+    }
+
+    .stars {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .service-type {
+      background: var(--accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .testimonial-date {
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      text-align: right;
+    }
+
+    /* Navigation manuelle */
+    .testimonials-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .nav-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .testimonials-counter {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .testimonial-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html" class="active">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO SECTION -->
+  
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials-content" class="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Ce que disent nos clients</h2>
+          <p>Plus de 500 clients satisfaits nous font confiance depuis plus de 10 ans</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsGrid">
+          <!-- Témoignage 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Fatou Diallo</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Coiffure Dames</span>
+            </div>
+            <p class="testimonial-text">"Anna a transformé mes cheveux ! Sa technique est exceptionnelle et elle prend vraiment le temps de comprendre ce que je veux. Le résultat dépasse toujours mes attentes. Je recommande vivement !"</p>
+            <div class="testimonial-date">Il y a 2 semaines</div>
+          </div>
+
+          <!-- Témoignage 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Mariam Koné</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Pose de Perruques</span>
+            </div>
+            <p class="testimonial-text">"Ma perruque est parfaite ! Anna a fait un travail exceptionnel. Le résultat est naturel et dure longtemps. Elle m'a donné de précieux conseils pour l'entretien. Je suis ravie !"</p>
+            <div class="testimonial-date">Il y a 1 mois</div>
+          </div>
+
+          <!-- Témoignage 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Adama Sissoko</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Nouage de Foulards</span>
+            </div>
+            <p class="testimonial-text">"Le nouage de foulards est vraiment la spécialité d'Anna ! Pour mon mariage, elle a créé un style unique et élégant. Tous mes invités m'ont complimentée. Un grand merci !"</p>
+            <div class="testimonial-date">Il y a 3 semaines</div>
+          </div>
+
+          <!-- Témoignage 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Ousmane Traoré</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Coiffure Hommes</span>
+            </div>
+            <p class="testimonial-text">"Excellente coupe ! Anna maîtrise parfaitement les techniques modernes. Ma barbe est impeccable et la coupe est exactement ce que je voulais. Je reviendrai sans hésiter."</p>
+            <div class="testimonial-date">Il y a 1 semaine</div>
+          </div>
+
+          <!-- Témoignage 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Aïcha Bamba</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Onglerie</span>
+            </div>
+            <p class="testimonial-text">"Service d'onglerie impeccable ! Anna est très minutieuse et utilise des produits de qualité. Mes ongles sont magnifiques et tiennent parfaitement. Je recommande !"</p>
+            <div class="testimonial-date">Il y a 2 semaines</div>
+          </div>
+
+          <!-- Témoignage 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Fatoumata Ouattara</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Formation</span>
+            </div>
+            <p class="testimonial-text">"Formation exceptionnelle ! J'ai appris des techniques que je n'aurais jamais imaginées. Anna est une excellente formatrice, patiente et pédagogue. J'ai ouvert mon salon 3 mois après !"</p>
+            <div class="testimonial-date">Il y a 2 mois</div>
+          </div>
+
+          <!-- Témoignage 7 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Moussa Diarra</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Soins de Barbe</span>
+            </div>
+            <p class="testimonial-text">"Entretien de barbe parfait ! Anna a un vrai talent pour la taille et le modelage. Ma barbe n'a jamais été aussi bien entretenue. Service professionnel et conseils précieux."</p>
+            <div class="testimonial-date">Il y a 1 semaine</div>
+          </div>
+
+          <!-- Témoignage 8 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Kadiatou Keita</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Coiffure Enfants</span>
+            </div>
+            <p class="testimonial-text">"Ma fille de 8 ans adore aller chez Anna ! Elle est très patiente avec les enfants et fait des coupes magnifiques. L'ambiance est chaleureuse et professionnelle."</p>
+            <div class="testimonial-date">Il y a 3 semaines</div>
+          </div>
+
+          <!-- Témoignage 9 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Hawa Coulibaly</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Massage</span>
+            </div>
+            <p class="testimonial-text">"Massage relaxant parfait ! Après une longue semaine de travail, c'est exactement ce dont j'avais besoin. Anna a des mains magiques. Je me sens détendue et revitalisée."</p>
+            <div class="testimonial-date">Il y a 1 semaine</div>
+          </div>
+
+          <!-- Témoignage 10 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Bintou Sanogo</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Nouage de Foulards</span>
+            </div>
+            <p class="testimonial-text">"Style parfait pour le bureau ! Élégant et pratique. Anna connaît toutes les techniques et s'adapte à chaque occasion. Je recommande vivement pour les professionnelles !"</p>
+            <div class="testimonial-date">Il y a 2 semaines</div>
+          </div>
+
+          <!-- Témoignage 11 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Issoufou Yaya</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Coiffure Hommes</span>
+            </div>
+            <p class="testimonial-text">"Coupe moderne et tendance ! Anna suit les dernières tendances et sait conseiller selon la forme du visage. Résultat impeccable et tenue parfaite."</p>
+            <div class="testimonial-date">Il y a 1 mois</div>
+          </div>
+
+          <!-- Témoignage 12 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="client-info">
+                <h4>Fanta Traoré</h4>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <span class="service-type">Formation</span>
+            </div>
+            <p class="testimonial-text">"Formation weekend parfaite ! Horaires flexibles et contenu de qualité. J'ai pu concilier travail et formation. Anna est une excellente pédagogue."</p>
+            <div class="testimonial-date">Il y a 3 mois</div>
+          </div>
+        </div>
+
+        <!-- Navigation manuelle -->
+        <div class="testimonials-nav">
+          <button class="nav-btn" id="prevBtn" onclick="showPreviousTestimonials()">
+            <i class="fas fa-chevron-left"></i> Précédent
+          </button>
+          <button class="nav-btn" id="nextBtn" onclick="showNextTestimonials()">
+            Suivant <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="testimonials-counter">
+          <span id="currentPage">1</span> / <span id="totalPages">3</span>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center" style="margin-top: 50px;">
+          <h3>Partagez votre expérience</h3>
+          <p>Votre avis nous aide à nous améliorer et aide d'autres clients à nous découvrir</p>
+          <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20partager%20mon%20expérience" class="btn btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Laisser un témoignage
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-massage.html">Massage</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="service-barbe.html">Soins de Barbe</a></li>
+          <li><a href="service-enfants.html">Coiffure Enfants</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20prendre%20un%20rendez-vous" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script>
+    // Gestion de la navigation des témoignages
+    let currentPage = 1;
+    const testimonialsPerPage = 4;
+    const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+    const totalPages = Math.ceil(totalTestimonials / testimonialsPerPage);
+
+    // Mise à jour du compteur
+    document.getElementById('totalPages').textContent = totalPages;
+
+    function showTestimonials(page) {
+      const testimonials = document.querySelectorAll('.testimonial-card');
+      const startIndex = (page - 1) * testimonialsPerPage;
+      const endIndex = startIndex + testimonialsPerPage;
+
+      testimonials.forEach((testimonial, index) => {
+        if (index >= startIndex && index < endIndex) {
+          testimonial.style.display = 'block';
+        } else {
+          testimonial.style.display = 'none';
+        }
+      });
+
+      // Mise à jour des boutons
+      document.getElementById('prevBtn').disabled = page === 1;
+      document.getElementById('nextBtn').disabled = page === totalPages;
+      
+      // Mise à jour du compteur
+      document.getElementById('currentPage').textContent = page;
+    }
+
+    function showNextTestimonials() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showTestimonials(currentPage);
+      }
+    }
+
+    function showPreviousTestimonials() {
+      if (currentPage > 1) {
+        currentPage--;
+        showTestimonials(currentPage);
+      }
+    }
+
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', function() {
+      showTestimonials(1);
+      
+      // Année dans le footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Services - Ana Coiffure</title>
+  <meta name="description" content="Découvrez tous nos services de coiffure : coiffure dames et hommes, pose de perruques, onglerie, massage, nouage de foulards et formations.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Ana Coiffure",
+    "description": "Salon de coiffure spécialisé dans la coiffure dames et hommes, pose de perruques, onglerie, massage et nouage de foulards",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cotonou",
+      "addressRegion": "Littoral",
+      "addressCountry": "BJ"
+    },
+    "telephone": "+2290197463209",
+    "url": "https://anacoiffure.bj",
+    "sameAs": [
+                  "https://www.facebook.com/profile.php?id=100078106437092",
+      "https://instagram.com/anacoiffure"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services de coiffure",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Coiffure Dames"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Coiffure Hommes"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pose de Perruques"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Onglerie"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Massage"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nouage de Foulards"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/services.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO SECTION -->
+    
+
+    <!-- SERVICES OVERVIEW -->
+    <section id="services-overview" class="services-overview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Découvrez nos prestations</h2>
+          <p>Chaque service est réalisé avec expertise et soin pour vous offrir le meilleur résultat</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Coiffure Dames -->
+          <div class="service-card" data-service="coiffure-dames">
+            <div class="service-image">
+              <img src="Img/Coiffure Dame1.jfif"Coiffure Dames">
+              <div class="service-overlay">
+                <a href="service-coiffure-dames.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Coiffure Dames</h3>
+              <p>Coiffures élégantes et tendances pour tous les types de cheveux</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 1-3h</span>
+                <span><i class="fas fa-star"></i> À partir de 5000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coiffure Hommes -->
+          <div class="service-card" data-service="coiffure-hommes">
+            <div class="service-image">
+              <img src="Img/Coupe homme.jpg" alt="Coiffure Hommes">
+              <div class="service-overlay">
+                <a href="service-coiffure-hommes.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Coiffure Hommes</h3>
+              <p>Coupes modernes et entretien de barbe pour un look soigné</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 30-60min</span>
+                <span><i class="fas fa-star"></i> À partir de 3000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pose de Perruques -->
+          <div class="service-card" data-service="perruques">
+            <div class="service-image">
+              <img src="Img/Pose de perruque naturel1.jpg" alt="Pose de Perruques">
+              <div class="service-overlay">
+                <a href="service-perruques.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Pose de Perruques</h3>
+              <p>Pose professionnelle et entretien de perruques naturelles et synthétiques</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 2-4h</span>
+                <span><i class="fas fa-star"></i> À partir de 8000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Onglerie -->
+          <div class="service-card" data-service="onglerie">
+            <div class="service-image">
+              <img src="Img/Onglerie.jpg" alt="Onglerie">
+              <div class="service-overlay">
+                <a href="service-onglerie.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Onglerie</h3>
+              <p>Soins des mains, pose de vernis et nail art pour des mains parfaites</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 45-90min</span>
+                <span><i class="fas fa-star"></i> À partir de 4000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Massage -->
+          <div class="service-card" data-service="massage">
+            <div class="service-image">
+              <img src="Img/Massage.jpg" alt="Massage">
+              <div class="service-overlay">
+                <a href="service-massage.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Massage</h3>
+              <p>Massages relaxants et thérapeutiques pour détendre corps et esprit</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 30-60min</span>
+                <span><i class="fas fa-star"></i> À partir de 6000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nouage de Foulards -->
+          <div class="service-card" data-service="foulards">
+            <div class="service-image">
+              <img src="Img/nouage foulards.jfif" alt="Nouage de Foulards">
+              <div class="service-overlay">
+                <a href="service-foulards.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Nouage de Foulards</h3>
+              <p>Notre spécialité : créations uniques et élégantes avec vos foulards</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 15-30min</span>
+                <span><i class="fas fa-star"></i> À partir de 2000 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soins de Barbe -->
+          <div class="service-card" data-service="barbe">
+            <div class="service-image">
+              <img src="Img/Barbe1.jpg" alt="Soins de Barbe">
+              <div class="service-overlay">
+                <a href="service-barbe.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Soins de Barbe</h3>
+              <p>Taillage, modelage et entretien professionnel de votre barbe</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 30-45min</span>
+                <span><i class="fas fa-star"></i> À partir de 3500 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coiffure Enfants -->
+          <div class="service-card" data-service="enfants">
+            <div class="service-image">
+              <img src="Img/Coiffure Enfant1.jfif" alt="Coiffure Enfants">
+              <div class="service-overlay">
+                <a href="service-enfants.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Coiffure Enfants</h3>
+              <p>Coupes adaptées et soins spécialisés pour les plus petits</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 20-40min</span>
+                <span><i class="fas fa-star"></i> À partir de 2500 FCFA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formations Professionnelles -->
+          <div class="service-card" data-service="formations">
+            <div class="service-image">
+              <img src="Img/Formation.jfif" alt="Formations Professionnelles">
+              <div class="service-overlay">
+                <a href="formations.html" class="btn btn-primary">En savoir plus</a>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3>Formations Professionnelles</h3>
+              <p>Ateliers pratiques : coupe, pose de perruque, nouage de foulard</p>
+              <div class="service-features">
+                <span><i class="fas fa-clock"></i> 1 semaine à 3 mois</span>
+                <span><i class="fas fa-star"></i> À partir de 50000 FCFA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="services-cta">
+          <h3>Besoin d'un conseil personnalisé ?</h3>
+          <p>Contactez-nous pour un devis sur mesure ou prenez rendez-vous</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20vos%20services" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Questions Fréquentes</h2>
+          <p>Tout ce que vous devez savoir sur nos services</p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Quels sont vos horaires d'ouverture ?</h3>
+            <p>Nous sommes ouverts du lundi au samedi de 09h00 à 19h00. Le dimanche et les jours fériés, le salon est fermé.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Faut-il prendre rendez-vous ?</h3>
+            <p>Nous recommandons fortement de prendre rendez-vous, surtout pour les services longs comme les coiffures dames et la pose de perruques. Pour les services rapides, vous pouvez venir sans rendez-vous selon nos disponibilités.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Acceptez-vous les cartes bancaires ?</h3>
+            <p>Nous acceptons les paiements en espèces et par mobile money (Moov Money, MTN Mobile Money). Les cartes bancaires ne sont pas encore acceptées.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Proposez-vous des produits de coiffure ?</h3>
+            <p>Oui, nous proposons une sélection de produits de qualité pour l'entretien de vos cheveux et perruques. N'hésitez pas à nous demander conseil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+           <li><a href="service-massage.html">Massage</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+           <li><a href="service-barbe.html">Soins de Barbe</a></li>
+           <li><a href="service-enfants.html">Coiffure Enfants</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

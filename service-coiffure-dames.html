@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coiffure Dames - Ana Coiffure</title>
+  <meta name="description" content="Découvrez nos services de coiffure pour dames : coupes tendances, colorations, lissages, défrisages et plus encore. Expertise et qualité garanties.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Coiffure Dames",
+    "description": "Services de coiffure pour dames incluant coupes, colorations, lissages et défrisages",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    },
+    "areaServed": "Cotonou",
+    "serviceType": "Coiffure Dames"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/service-detail.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- SERVICE DETAILS -->
+    <section id="service-details" class="service-details">
+      <div class="container">
+        <div class="service-overview">
+          <div class="service-info">
+            <h2>Notre expertise en coiffure dames</h2>
+            <p>Chez Ana Coiffure, nous mettons notre expertise au service de votre beauté. Notre équipe qualifiée vous propose une large gamme de services de coiffure adaptés à tous les types de cheveux et à toutes les occasions.</p>
+            
+            <div class="service-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Durée</h4>
+                  <p>1 à 3 heures selon le service</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Prix</h4>
+                  <p>À partir de 5000 FCFA</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Garantie</h4>
+                  <p>Produits de qualité professionnelle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-image-gallery">
+            <div class="gallery-main">
+              <img src="Img/Coiffure Dame1.jfif" alt="Coiffure dames élégante" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="Img/Coiffure Dame3.jfif" alt="Coiffure 1" class="thumb active" data-src="Img/Coiffure Dame3.jfif">
+              <img src="Img/Coiffure Dame3.jfif" alt="Coiffure 2" class="thumb" data-src="Img/Coiffure Dame3.jfif">
+              <img src="Img/Coiffure Dame4.jfif" alt="Coiffure 3" class="thumb" data-src="Img/Coiffure Dame4.jfif">
+              <img src="Img/Coiffure Dame5.jfif" alt="Coiffure 4" class="thumb" data-src="Img/Coiffure Dame5.jfif">
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="services-list">
+          <h2>Nos prestations coiffure dames</h2>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-cut"></i> Coupes et Brushing</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe simple</h4>
+                  <span class="price">5000 FCFA</span>
+                </div>
+                <p>Coupe basique avec brushing léger</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coupe + Brushing</h4>
+                  <span class="price">8000 FCFA</span>
+                </div>
+                <p>Coupe personnalisée avec brushing soigné</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Brushing spécial</h4>
+                  <span class="price">6000 FCFA</span>
+                </div>
+                <p>Brushing élaboré pour occasions spéciales</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-palette"></i> Colorations</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coloration simple</h4>
+                  <span class="price">12000 FCFA</span>
+                </div>
+                <p>Coloration uniforme avec produits professionnels</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Mèches</h4>
+                  <span class="price">15000 FCFA</span>
+                </div>
+                <p>Pose de mèches pour un effet naturel</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Balayage</h4>
+                  <span class="price">18000 FCFA</span>
+                </div>
+                <p>Balayage pour un effet soleil naturel</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-magic"></i> Lissages et Défrisages</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Défrisage</h4>
+                  <span class="price">20000 FCFA</span>
+                </div>
+                <p>Défrisage complet avec soins</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3h</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Lissage brésilien</h4>
+                  <span class="price">25000 FCFA</span>
+                </div>
+                <p>Lissage durable avec kératine</p>
+                <span class="duration"><i class="fas fa-clock"></i> 3h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Soins kératine</h4>
+                  <span class="price">15000 FCFA</span>
+                </div>
+                <p>Traitement kératine pour cheveux abîmés</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-gem"></i> Coiffures d'Occasion</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coiffure mariage</h4>
+                  <span class="price">30000 FCFA</span>
+                </div>
+                <p>Coiffure élaborée pour votre jour J</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Coiffure soirée</h4>
+                  <span class="price">15000 FCFA</span>
+                </div>
+                <p>Coiffure glamour pour vos sorties</p>
+                <span class="duration"><i class="fas fa-clock"></i> 1h30</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Tresses africaines</h4>
+                  <span class="price">12000 FCFA</span>
+                </div>
+                <p>Tresses traditionnelles et modernes</p>
+                <span class="duration"><i class="fas fa-clock"></i> 2h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="why-choose-us">
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+          <div class="reasons-grid">
+            <div class="reason-item">
+              <i class="fas fa-award"></i>
+              <h3>Expertise</h3>
+              <p>Plus de 10 ans d'expérience en coiffure dames</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-leaf"></i>
+              <h3>Produits naturels</h3>
+              <p>Utilisation de produits de qualité professionnelle</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-heart"></i>
+              <h3>Conseils personnalisés</h3>
+              <p>Recommandations adaptées à votre type de cheveux</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-clock"></i>
+              <h3>Ponctualité</h3>
+              <p>Respect de vos horaires et de votre temps</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="service-testimonials">
+          <h2>Avis de nos clientes</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Fatou D.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Coloration</span>
+              </div>
+              <p>"Anna a fait un travail exceptionnel sur ma coloration. Le résultat est naturel et dure longtemps. Je recommande !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Mariam K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Coiffure mariage</span>
+              </div>
+              <p>"Ma coiffure de mariage était parfaite ! Anna a su créer exactement ce que je voulais. Un grand merci !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Adama S.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Lissage</span>
+              </div>
+              <p>"Mon lissage brésilien est impeccable. Les cheveux sont doux et brillants. Je reviendrai !"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="service-cta">
+          <h2>Prête à transformer votre look ?</h2>
+          <p>Prenez rendez-vous dès maintenant pour une consultation personnalisée</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20coiffure%20dames" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20la%20coiffure%20dames" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>
+
+    

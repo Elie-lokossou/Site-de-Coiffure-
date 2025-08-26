@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouage de Foulards - Ana Coiffure</title>
+  <meta name="description" content="Découvrez notre spécialité : le nouage de foulards. Techniques traditionnelles et modernes pour cérémonies, travail ou style quotidien. Expertise unique garantie.">
+  
+  <!-- Schema.org pour SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Nouage de Foulards",
+    "description": "Spécialité en nouage de foulards incluant techniques traditionnelles et modernes",
+    "provider": {
+      "@type": "BeautySalon",
+      "name": "Ana Coiffure",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressRegion": "Littoral",
+        "addressCountry": "BJ"
+      },
+      "telephone": "+2290197463209"
+    },
+    "areaServed": "Cotonou",
+    "serviceType": "Nouage de Foulards"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/service-detail.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="connexion.html" id="loginBtn">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- SERVICE DETAILS -->
+    <section id="service-details" class="service-details">
+      <div class="container">
+        <div class="service-overview">
+          <div class="service-info">
+            <h2>Notre expertise en nouage de foulards</h2>
+            <p>Le nouage de foulards est notre spécialité depuis plus de 10 ans. Nous maîtrisons les techniques traditionnelles et modernes pour créer des styles uniques adaptés à chaque occasion : cérémonies, travail, sorties ou style quotidien.</p>
+            
+            <div class="service-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Durée</h4>
+                  <p>15 à 30 minutes selon le style</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Prix</h4>
+                  <p>À partir de 2000 FCFA</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Garantie</h4>
+                  <p>Style unique et tenue parfaite</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-image-gallery">
+            <div class="gallery-main">
+              <img src="Img/nouage foulards.jfif" alt="Nouage de foulard élégant" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="Img/nouage foulards1.jfif" alt="Foulard 1" class="thumb active" data-src="Img/nouage foulards1.jfif">
+              <img src="Img/nouage foulards2.jfif" alt="Foulard 2" class="thumb" data-src="Img/nouage foulards2.jfif">
+              <img src="Img/nouage foulards3.jfif" alt="Foulard 3" class="thumb" data-src="Img/nouage foulards3.jfif">
+              <img src="Img/nouage foulards4.jfif" alt="Foulard 4" class="thumb" data-src="Img/nouage foulards4.jfif">
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES LIST -->
+        <div class="services-list">
+          <h2>Nos prestations nouage de foulards</h2>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-crown"></i> Styles Cérémonie</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style mariage</h4>
+                  <span class="price">5000 FCFA</span>
+                </div>
+                <p>Nouage élaboré pour votre jour J</p>
+                <span class="duration"><i class="fas fa-clock"></i> 30min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style baptême</h4>
+                  <span class="price">4000 FCFA</span>
+                </div>
+                <p>Style élégant pour cérémonies religieuses</p>
+                <span class="duration"><i class="fas fa-clock"></i> 25min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style soirée</h4>
+                  <span class="price">3500 FCFA</span>
+                </div>
+                <p>Nouage glamour pour occasions spéciales</p>
+                <span class="duration"><i class="fas fa-clock"></i> 20min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-briefcase"></i> Styles Professionnel</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style bureau</h4>
+                  <span class="price">2000 FCFA</span>
+                </div>
+                <p>Nouage simple et élégant pour le travail</p>
+                <span class="duration"><i class="fas fa-clock"></i> 15min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style réunion</h4>
+                  <span class="price">3000 FCFA</span>
+                </div>
+                <p>Style sophistiqué pour événements professionnels</p>
+                <span class="duration"><i class="fas fa-clock"></i> 20min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style conférence</h4>
+                  <span class="price">4000 FCFA</span>
+                </div>
+                <p>Nouage imposant pour prises de parole</p>
+                <span class="duration"><i class="fas fa-clock"></i> 25min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <h3><i class="fas fa-heart"></i> Styles Quotidien</h3>
+            <div class="service-items">
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style casual</h4>
+                  <span class="price">1500 FCFA</span>
+                </div>
+                <p>Nouage décontracté pour la vie quotidienne</p>
+                <span class="duration"><i class="fas fa-clock"></i> 10min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style shopping</h4>
+                  <span class="price">2000 FCFA</span>
+                </div>
+                <p>Style pratique et élégant pour sorties</p>
+                <span class="duration"><i class="fas fa-clock"></i> 15min</span>
+              </div>
+              
+              <div class="service-item">
+                <div class="service-item-header">
+                  <h4>Style sport</h4>
+                  <span class="price">1800 FCFA</span>
+                </div>
+                <p>Nouage sécurisé pour activités physiques</p>
+                <span class="duration"><i class="fas fa-clock"></i> 12min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="why-choose-us">
+          <h2>Pourquoi choisir Ana Coiffure ?</h2>
+          <div class="reasons-grid">
+            <div class="reason-item">
+              <i class="fas fa-award"></i>
+              <h3>Spécialiste reconnue</h3>
+              <p>Plus de 10 ans d'expérience en nouage de foulards</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-leaf"></i>
+              <h3>Techniques uniques</h3>
+              <p>Mélange de traditions et de créativité moderne</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-heart"></i>
+              <h3>Style personnalisé</h3>
+              <p>Adaptation selon votre morphologie et goûts</p>
+            </div>
+            <div class="reason-item">
+              <i class="fas fa-clock"></i>
+              <h3>Rapidité</h3>
+              <p>Services rapides sans compromis sur la qualité</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="service-testimonials">
+          <h2>Avis de nos clientes</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Fatou D.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Style mariage</span>
+              </div>
+              <p>"Mon foulard de mariage était magnifique ! Anna a créé exactement ce que je voulais. Un grand merci !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Mariam K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Style bureau</span>
+              </div>
+              <p>"Style parfait pour le bureau ! Élégant et pratique. Je recommande vivement !"</p>
+            </div>
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="client-info">
+                  <h4>Adama S.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="service-type">Formation</span>
+              </div>
+              <p>"Formation excellente ! J'ai appris des techniques que je n'aurais jamais imaginées."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA SECTION -->
+        <div class="service-cta">
+          <h2>Prête à sublimer votre style ?</h2>
+          <p>Prenez rendez-vous dès maintenant pour une création unique</p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20le%20nouage%20de%20foulards" class="btn btn-primary" target="_blank">
+              <i class="fab fa-whatsapp"></i> Nous contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <!-- Infos -->
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+        <p>Spécialiste en nouage de foulards</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Nos Services</h3>
+        <ul>
+          <li><a href="service-coiffure-dames.html">Coiffure Dames</a></li>
+          <li><a href="service-coiffure-hommes.html">Coiffure Hommes</a></li>
+          <li><a href="service-perruques.html">Pose de Perruques</a></li>
+          <li><a href="service-onglerie.html">Onglerie</a></li>
+          <li><a href="service-foulards.html">Nouage de Foulards</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+
+      <!-- Horaires -->
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+        <p>Fermeture : Jours fériés</p>
+      </div>
+
+      <!-- Réseaux -->
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section newsletter-section">
+        <h3>Newsletter</h3>
+        <p>Restez informé(e) de nos nouveautés et offres spéciales</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="newsletter-message" id="newsletterMessage"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés. | 
+      <a href="mentions-legales.html">Mentions légales</a> | 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-fab" href="https://wa.me/+2290197463209?text=Bonjour%20Anna,%20je%20souhaite%20des%20informations%20sur%20le%20nouage%20de%20foulards" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/service-detail.js"></script>
+</body>
+</html>

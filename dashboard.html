@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Espace - Ana Coiffure</title>
+  <meta name="description" content="Accédez à votre espace personnel Ana Coiffure : rendez-vous, historique, points de fidélité et témoignages.">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">AnaCoiffure</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="user-menu">
+          <a href="#" class="user-toggle">
+            <i class="fas fa-user"></i>
+            <span id="userName">Utilisateur</span>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="user-dropdown">
+            <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Mon Espace</a></li>
+            <li><a href="profile.html"><i class="fas fa-user-edit"></i> Mon Profil</a></li>
+            <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="container">
+      <!-- En-tête du dashboard -->
+      <div class="dashboard-header">
+        <div class="welcome-section">
+          <h1>Bienvenue, <span id="userNameHeader">Utilisateur</span> !</h1>
+          <p>Gérez vos rendez-vous, consultez votre historique et suivez vos points de fidélité.</p>
+        </div>
+        <div class="quick-actions">
+          <button class="btn-secondary" onclick="openTestimonialModal()">
+            <i class="fas fa-comment"></i> Laisser un avis
+          </button>
+        </div>
+      </div>
+
+      <!-- Statistiques utilisateur -->
+      <div class="user-stats">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="userPoints">0</div>
+            <div class="stat-label">Points de fidélité</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="totalAppointments">0</div>
+            <div class="stat-label">Rendez-vous total</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="userRank">-</div>
+            <div class="stat-label">Classement</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="availableRewards">0</div>
+            <div class="stat-label">Récompenses disponibles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenu principal -->
+      <div class="dashboard-content">
+        <!-- Rendez-vous à venir -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2><i class="fas fa-calendar-alt"></i> Prochains rendez-vous</h2>
+            <button class="btn-secondary btn-sm" onclick="openReservationModal()">
+              <i class="fas fa-plus"></i> Nouveau
+            </button>
+          </div>
+          <div class="appointments-list" id="upcomingAppointments">
+            <!-- Les rendez-vous seront chargés ici -->
+          </div>
+        </div>
+
+        <!-- Historique des rendez-vous -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2><i class="fas fa-history"></i> Historique des rendez-vous</h2>
+            <div class="filter-controls">
+              <select id="historyFilter" onchange="filterHistory()">
+                <option value="all">Tous</option>
+                <option value="completed">Terminés</option>
+                <option value="cancelled">Annulés</option>
+              </select>
+            </div>
+          </div>
+          <div class="appointments-list" id="appointmentsHistory">
+            <!-- L'historique sera chargé ici -->
+          </div>
+        </div>
+
+        <!-- Mes témoignages -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2><i class="fas fa-comments"></i> Mes témoignages</h2>
+            <button class="btn-secondary btn-sm" onclick="openTestimonialModal()">
+              <i class="fas fa-plus"></i> Nouveau
+            </button>
+          </div>
+          <div class="testimonials-list" id="userTestimonials">
+            <!-- Les témoignages seront chargés ici -->
+          </div>
+        </div>
+
+        <!-- Programme de fidélité -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2><i class="fas fa-gift"></i> Programme de fidélité</h2>
+          </div>
+          <div class="loyalty-program">
+            <div class="loyalty-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="loyaltyProgress"></div>
+              </div>
+              <div class="progress-text">
+                <span id="currentPoints">0</span> / <span id="nextLevelPoints">100</span> points
+              </div>
+            </div>
+            <div class="loyalty-levels">
+              <div class="level-item" data-level="bronze">
+                <i class="fas fa-medal"></i>
+                <span>Bronze</span>
+                <small>0-99 points</small>
+              </div>
+              <div class="level-item" data-level="silver">
+                <i class="fas fa-medal"></i>
+                <span>Argent</span>
+                <small>100-299 points</small>
+              </div>
+              <div class="level-item" data-level="gold">
+                <i class="fas fa-medal"></i>
+                <span>Or</span>
+                <small>300+ points</small>
+              </div>
+            </div>
+            <div class="available-rewards" id="availableRewardsList">
+              <!-- Les récompenses seront chargées ici -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Top 3 clients -->
+        <div class="dashboard-section">
+          <div class="section-header">
+            <h2><i class="fas fa-trophy"></i> Top 3 clients de l'année</h2>
+          </div>
+          <div class="top-clients" id="topClients">
+            <!-- Le classement sera chargé ici -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de réservation -->
+  <div class="modal" id="reservationModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeReservationModal()">&times;</button>
+      <h3>Nouveau rendez-vous</h3>
+      <form id="dashboardReservationForm">
+        <div class="form-group">
+          <label for="dashboardService">Service *</label>
+          <select id="dashboardService" name="service" required>
+            <option value="">Sélectionner un service</option>
+            <option value="coiffure-dame">Coiffure — Dame</option>
+            <option value="pose-perruque">Pose de perruque</option>
+            <option value="onglerie">Onglerie</option>
+            <option value="massage">Massage</option>
+            <option value="nouage-foulard">Nouage de foulard</option>
+            <option value="formation">Formation</option>
+            <option value="coupe-homme">Coupe — Homme</option>
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+            <option value="coupe-enfant">Coupe — Enfant</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dashboardDate">Date souhaitée *</label>
+          <input type="date" id="dashboardDate" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="dashboardTime">Heure souhaitée</label>
+          <input type="time" id="dashboardTime" name="time">
+        </div>
+        <div class="form-group">
+          <label for="dashboardNote">Préférences (facultatif)</label>
+          <textarea id="dashboardNote" name="note" placeholder="Décrivez vos préférences..."></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn-secondary" onclick="closeReservationModal()">Annuler</button>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-check"></i> Confirmer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de témoignage -->
+  <div class="modal" id="testimonialModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeTestimonialModal()">&times;</button>
+      <h3>Laisser un témoignage</h3>
+      <form id="testimonialForm">
+        <div class="form-group">
+          <label for="testimonialService">Service concerné</label>
+          <select id="testimonialService" name="service">
+            <option value="">Sélectionner un service</option>
+            <option value="coiffure-dame">Coiffure — Dame</option>
+            <option value="pose-perruque">Pose de perruque</option>
+            <option value="onglerie">Onglerie</option>
+            <option value="massage">Massage</option>
+            <option value="nouage-foulard">Nouage de foulard</option>
+            <option value="formation">Formation</option>
+            <option value="coupe-homme">Coupe — Homme</option>
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+            <option value="coupe-enfant">Coupe — Enfant</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="testimonialRating">Note *</label>
+          <div class="rating-input">
+            <input type="radio" name="rating" value="5" id="star5" required>
+            <label for="star5"><i class="fas fa-star"></i></label>
+            <input type="radio" name="rating" value="4" id="star4">
+            <label for="star4"><i class="fas fa-star"></i></label>
+            <input type="radio" name="rating" value="3" id="star3">
+            <label for="star3"><i class="fas fa-star"></i></label>
+            <input type="radio" name="rating" value="2" id="star2">
+            <label for="star2"><i class="fas fa-star"></i></label>
+            <input type="radio" name="rating" value="1" id="star1">
+            <label for="star1"><i class="fas fa-star"></i></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="testimonialText">Votre témoignage *</label>
+          <textarea id="testimonialText" name="text" required placeholder="Partagez votre expérience..."></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn-secondary" onclick="closeTestimonialModal()">Annuler</button>
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Ana Coiffure</h3>
+        <p>Agla Hlazouto, Cotonou</p>
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+      </div>
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+        <p>Dimanche : Fermé</p>
+      </div>
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100078106437092" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+              <div class="level-item" data-level="silver">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Argent</span>
+
+                <small>100-299 points</small>
+
+              </div>
+
+              <div class="level-item" data-level="gold">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Or</span>
+
+                <small>300+ points</small>
+
+              </div>
+
+            </div>
+
+            <div class="available-rewards" id="availableRewardsList">
+
+              <!-- Les récompenses seront chargées ici -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Top 3 clients -->
+
+        <div class="dashboard-section">
+
+          <div class="section-header">
+
+            <h2><i class="fas fa-trophy"></i> Top 3 clients de l'année</h2>
+
+          </div>
+
+          <div class="top-clients" id="topClients">
+
+            <!-- Le classement sera chargé ici -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- Modal de réservation -->
+
+  <div class="modal" id="reservationModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeReservationModal()">&times;</button>
+
+      <h3>Nouveau rendez-vous</h3>
+
+      <form id="dashboardReservationForm">
+
+        <div class="form-group">
+
+          <label for="dashboardService">Service *</label>
+
+          <select id="dashboardService" name="service" required>
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardDate">Date souhaitée *</label>
+
+          <input type="date" id="dashboardDate" name="date" required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardTime">Heure souhaitée</label>
+
+          <input type="time" id="dashboardTime" name="time">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardNote">Préférences (facultatif)</label>
+
+          <textarea id="dashboardNote" name="note" placeholder="Décrivez vos préférences..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeReservationModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-check"></i> Confirmer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Modal de témoignage -->
+
+  <div class="modal" id="testimonialModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeTestimonialModal()">&times;</button>
+
+      <h3>Laisser un témoignage</h3>
+
+      <form id="testimonialForm">
+
+        <div class="form-group">
+
+          <label for="testimonialService">Service concerné</label>
+
+          <select id="testimonialService" name="service">
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialRating">Note *</label>
+
+          <div class="rating-input">
+
+            <input type="radio" name="rating" value="5" id="star5" required>
+
+            <label for="star5"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="4" id="star4">
+
+            <label for="star4"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="3" id="star3">
+
+            <label for="star3"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="2" id="star2">
+
+            <label for="star2"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="1" id="star1">
+
+            <label for="star1"><i class="fas fa-star"></i></label>
+
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialText">Votre témoignage *</label>
+
+          <textarea id="testimonialText" name="text" required placeholder="Partagez votre expérience..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeTestimonialModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-paper-plane"></i> Envoyer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-section">
+
+        <h3>Ana Coiffure</h3>
+
+        <p>Agla Hlazouto, Cotonou</p>
+
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Horaires</h3>
+
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+
+        <p>Dimanche : Fermé</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Réseaux</h3>
+
+        <div class="social-icons">
+
+          <a href="https://facebook.com/anacoiffure" target="_blank" aria-label="Facebook">
+
+            <i class="fab fa-facebook"></i>
+
+          </a>
+
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+
+            <i class="fab fa-whatsapp"></i>
+
+          </a>
+
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés.
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+              <div class="level-item" data-level="silver">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Argent</span>
+
+                <small>100-299 points</small>
+
+              </div>
+
+              <div class="level-item" data-level="gold">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Or</span>
+
+                <small>300+ points</small>
+
+              </div>
+
+            </div>
+
+            <div class="available-rewards" id="availableRewardsList">
+
+              <!-- Les récompenses seront chargées ici -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Top 3 clients -->
+
+        <div class="dashboard-section">
+
+          <div class="section-header">
+
+            <h2><i class="fas fa-trophy"></i> Top 3 clients de l'année</h2>
+
+          </div>
+
+          <div class="top-clients" id="topClients">
+
+            <!-- Le classement sera chargé ici -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- Modal de réservation -->
+
+  <div class="modal" id="reservationModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeReservationModal()">&times;</button>
+
+      <h3>Nouveau rendez-vous</h3>
+
+      <form id="dashboardReservationForm">
+
+        <div class="form-group">
+
+          <label for="dashboardService">Service *</label>
+
+          <select id="dashboardService" name="service" required>
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardDate">Date souhaitée *</label>
+
+          <input type="date" id="dashboardDate" name="date" required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardTime">Heure souhaitée</label>
+
+          <input type="time" id="dashboardTime" name="time">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardNote">Préférences (facultatif)</label>
+
+          <textarea id="dashboardNote" name="note" placeholder="Décrivez vos préférences..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeReservationModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-check"></i> Confirmer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Modal de témoignage -->
+
+  <div class="modal" id="testimonialModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeTestimonialModal()">&times;</button>
+
+      <h3>Laisser un témoignage</h3>
+
+      <form id="testimonialForm">
+
+        <div class="form-group">
+
+          <label for="testimonialService">Service concerné</label>
+
+          <select id="testimonialService" name="service">
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialRating">Note *</label>
+
+          <div class="rating-input">
+
+            <input type="radio" name="rating" value="5" id="star5" required>
+
+            <label for="star5"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="4" id="star4">
+
+            <label for="star4"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="3" id="star3">
+
+            <label for="star3"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="2" id="star2">
+
+            <label for="star2"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="1" id="star1">
+
+            <label for="star1"><i class="fas fa-star"></i></label>
+
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialText">Votre témoignage *</label>
+
+          <textarea id="testimonialText" name="text" required placeholder="Partagez votre expérience..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeTestimonialModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-paper-plane"></i> Envoyer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-section">
+
+        <h3>Ana Coiffure</h3>
+
+        <p>Agla Hlazouto, Cotonou</p>
+
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Horaires</h3>
+
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+
+        <p>Dimanche : Fermé</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Réseaux</h3>
+
+        <div class="social-icons">
+
+          <a href="https://facebook.com/anacoiffure" target="_blank" aria-label="Facebook">
+
+            <i class="fab fa-facebook"></i>
+
+          </a>
+
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+
+            <i class="fab fa-whatsapp"></i>
+
+          </a>
+
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés.
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+              <div class="level-item" data-level="silver">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Argent</span>
+
+                <small>100-299 points</small>
+
+              </div>
+
+              <div class="level-item" data-level="gold">
+
+                <i class="fas fa-medal"></i>
+
+                <span>Or</span>
+
+                <small>300+ points</small>
+
+              </div>
+
+            </div>
+
+            <div class="available-rewards" id="availableRewardsList">
+
+              <!-- Les récompenses seront chargées ici -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Top 3 clients -->
+
+        <div class="dashboard-section">
+
+          <div class="section-header">
+
+            <h2><i class="fas fa-trophy"></i> Top 3 clients de l'année</h2>
+
+          </div>
+
+          <div class="top-clients" id="topClients">
+
+            <!-- Le classement sera chargé ici -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- Modal de réservation -->
+
+  <div class="modal" id="reservationModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeReservationModal()">&times;</button>
+
+      <h3>Nouveau rendez-vous</h3>
+
+      <form id="dashboardReservationForm">
+
+        <div class="form-group">
+
+          <label for="dashboardService">Service *</label>
+
+          <select id="dashboardService" name="service" required>
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardDate">Date souhaitée *</label>
+
+          <input type="date" id="dashboardDate" name="date" required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardTime">Heure souhaitée</label>
+
+          <input type="time" id="dashboardTime" name="time">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="dashboardNote">Préférences (facultatif)</label>
+
+          <textarea id="dashboardNote" name="note" placeholder="Décrivez vos préférences..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeReservationModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-check"></i> Confirmer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Modal de témoignage -->
+
+  <div class="modal" id="testimonialModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeTestimonialModal()">&times;</button>
+
+      <h3>Laisser un témoignage</h3>
+
+      <form id="testimonialForm">
+
+        <div class="form-group">
+
+          <label for="testimonialService">Service concerné</label>
+
+          <select id="testimonialService" name="service">
+
+            <option value="">Sélectionner un service</option>
+
+            <option value="coiffure-dame">Coiffure — Dame</option>
+
+            <option value="pose-perruque">Pose de perruque</option>
+
+            <option value="onglerie">Onglerie</option>
+
+            <option value="massage">Massage</option>
+
+            <option value="nouage-foulard">Nouage de foulard</option>
+
+            <option value="formation">Formation</option>
+
+            <option value="coupe-homme">Coupe — Homme</option>
+
+            <option value="taille-barbe">Taille / Entretien barbe</option>
+
+            <option value="coupe-enfant">Coupe — Enfant</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialRating">Note *</label>
+
+          <div class="rating-input">
+
+            <input type="radio" name="rating" value="5" id="star5" required>
+
+            <label for="star5"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="4" id="star4">
+
+            <label for="star4"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="3" id="star3">
+
+            <label for="star3"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="2" id="star2">
+
+            <label for="star2"><i class="fas fa-star"></i></label>
+
+            <input type="radio" name="rating" value="1" id="star1">
+
+            <label for="star1"><i class="fas fa-star"></i></label>
+
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="testimonialText">Votre témoignage *</label>
+
+          <textarea id="testimonialText" name="text" required placeholder="Partagez votre expérience..."></textarea>
+
+        </div>
+
+        <div class="form-buttons">
+
+          <button type="button" class="btn-secondary" onclick="closeTestimonialModal()">Annuler</button>
+
+          <button type="submit" class="btn-primary">
+
+            <i class="fas fa-paper-plane"></i> Envoyer
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-section">
+
+        <h3>Ana Coiffure</h3>
+
+        <p>Agla Hlazouto, Cotonou</p>
+
+        <p>WhatsApp : +229 01 97 46 32 09</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Horaires</h3>
+
+        <p>Lundi - Samedi : 09:00 — 19:00</p>
+
+        <p>Dimanche : Fermé</p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>Réseaux</h3>
+
+        <div class="social-icons">
+
+          <a href="https://facebook.com/anacoiffure" target="_blank" aria-label="Facebook">
+
+            <i class="fab fa-facebook"></i>
+
+          </a>
+
+          <a href="https://wa.me/+2290197463209" target="_blank" aria-label="WhatsApp">
+
+            <i class="fab fa-whatsapp"></i>
+
+          </a>
+
+          <a href="https://instagram.com/anacoiffure" target="_blank" aria-label="Instagram">
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+
+      © <span id="year"></span> Ana Coiffure — Tous droits réservés.
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
